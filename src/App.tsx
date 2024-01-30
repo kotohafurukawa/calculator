@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Card, CardBody } from "@nextui-org/react";
 import { NumBtn } from "./components/NumBtn";
 import { PlusBtn } from "./components/PlusBtn";
@@ -8,14 +7,15 @@ import { DividedBtn } from "./components/DividedBtn";
 import { DotBtn } from "./components/DotBtn";
 import { EqualBtn } from "./components/EqualBtn";
 import { ClearBtn } from "./components/ClearBtn";
+import { useSelector } from "./store/store";
 
 const App = () => {
-  const [state, setState] = useState(0);
+  const result = useSelector((state) => state.calc);
   return (
     <div className="max-w-sm mx-auto px-4 md:px-0">
       <Card>
         <CardBody>
-          <p>{state}</p>
+          <p className="text-right text-2xl font-bold">{result}</p>
         </CardBody>
       </Card>
       <div className="pt-4 text-center">
