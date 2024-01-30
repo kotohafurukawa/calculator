@@ -7,8 +7,11 @@ const calculatorSlice = createSlice({
     carryUp: (state, { payload }) => {
       return state * 10 + payload;
     },
+    clear: () => {
+      return 0;
+    },
   },
 });
 
-export const { carryUp } = calculatorSlice.actions;
+export const { carryUp, clear } = calculatorSlice.actions;
 export const calcReducer = calculatorSlice.reducer;
