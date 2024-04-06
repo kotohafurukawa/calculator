@@ -3,7 +3,7 @@ import {
   useSelector as rawUseSelector,
   TypedUseSelectorHook,
 } from "react-redux";
-import { calcReducer } from "./modules/calc";
+import { calcReducer } from "../reducers/calc";
 
 export const store = configureStore({
   reducer: {
