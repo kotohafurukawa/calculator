@@ -1,16 +1,16 @@
 import { Button } from "@nextui-org/react";
 import { useDispatch } from "react-redux";
-import { dot } from "../reducers/calc";
+import { plusMinus } from "../reducers/calc";
 
-export const DotBtn = () => {
+export const PlusMinusBtn = () => {
   const dispatch = useDispatch();
   return (
     <Button
       onPress={() => {
-        dispatch(dot());
+        dispatch(plusMinus());
       }}
     >
-      .
+      ±
     </Button>
   );
 };

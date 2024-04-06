@@ -1,8 +1,8 @@
 import { Button } from "@nextui-org/react";
 import { useDispatch } from "react-redux";
-import { carryUp } from "../store/modules/calc";
+import { appendValue } from "../reducers/calc";
 type NumPropsType = {
-  number: number;
+  number: string;
 };
 
 export const NumBtn = ({ number }: NumPropsType) => {
@@ -10,7 +10,7 @@ export const NumBtn = ({ number }: NumPropsType) => {
   return (
     <Button
       onPress={() => {
-        dispatch(carryUp(number));
+        dispatch(appendValue(number));
       }}
     >
       {number}

@@ -1,6 +1,6 @@
 import { Button } from "@nextui-org/react";
 import { useDispatch } from "react-redux";
-import { clear } from "../store/modules/calc";
+import { clear } from "../reducers/calc";
 
 export const ClearBtn = () => {
   const dispatch = useDispatch();
